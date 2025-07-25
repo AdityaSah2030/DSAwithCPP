@@ -5,6 +5,7 @@ This document provides optimized algorithms for common mathematical operations i
 ## 1. Counting Number of Digits
 
 ### Method 1: Logarithmic Approach
+
 ```cpp
 int countDigits(int n) {
     // Handle edge case
@@ -19,6 +20,7 @@ int countDigits(int n) {
 ```
 
 ### Method 2: Iterative Approach
+
 ```cpp
 int countDigits(int n) {
     // Handle edge case
@@ -42,6 +44,7 @@ int countDigits(int n) {
 ## 2. Print All Divisors of a Number
 
 ### Optimized Approach
+
 ```cpp
 vector<int> printDivisors(int n) {
     vector<int> divisors;
@@ -71,6 +74,7 @@ vector<int> printDivisors(int n) {
 ## 3. Check for Prime Number
 
 ### Optimized Approach
+
 ```cpp
 bool isPrime(int n) {
     // Handle edge cases
@@ -96,6 +100,7 @@ bool isPrime(int n) {
 ## 4. Print Prime Factors of a Number
 
 ### Optimized Approach
+
 ```cpp
 vector<int> primeFactors(int n) {
     vector<int> factors;
@@ -131,6 +136,7 @@ vector<int> primeFactors(int n) {
 ## 5. Fast Exponentiation (Binary Exponentiation)
 
 ### Recursive Approach
+
 ```cpp
 long long fastPow(long long base, long long exp) {
     // Base cases
@@ -149,6 +155,7 @@ long long fastPow(long long base, long long exp) {
 ```
 
 ### Iterative Approach (More efficient)
+
 ```cpp
 long long fastPow(long long base, long long exp) {
     long long result = 1;
@@ -170,6 +177,7 @@ long long fastPow(long long base, long long exp) {
 ```
 
 ### Modular Exponentiation
+
 ```cpp
 long long modPow(long long base, long long exp, long long mod) {
     long long result = 1;
@@ -198,6 +206,7 @@ long long modPow(long long base, long long exp, long long mod) {
 ## 6. Sieve of Eratosthenes
 
 ### Basic Implementation
+
 ```cpp
 vector<bool> sieveOfEratosthenes(int n) {
     // Create a boolean array "isPrime" and initialize all entries as true
@@ -222,6 +231,7 @@ vector<bool> sieveOfEratosthenes(int n) {
 ```
 
 ### Optimized Implementation (marking only odd numbers)
+
 ```cpp
 vector<bool> sieveOfEratosthenes(int n) {
     // Handle edge cases
@@ -256,6 +266,7 @@ vector<bool> sieveOfEratosthenes(int n) {
 ## 7. Count Primes in Range [L, R]
 
 ### Using Segmented Sieve
+
 ```cpp
 int countPrimesInRange(long long L, long long R) {
     // Generate all primes up to sqrt(R)
@@ -310,6 +321,7 @@ int countPrimesInRange(long long L, long long R) {
 ## 8. Smallest Prime Factor of a Number
 
 ### Using Sieve
+
 ```cpp
 vector<int> smallestPrimeFactor(int n) {
     vector<int> spf(n + 1);
@@ -338,6 +350,7 @@ vector<int> smallestPrimeFactor(int n) {
 ```
 
 ### Using SPF to Find Prime Factorization
+
 ```cpp
 vector<int> primeFactorization(int n, const vector<int>& spf) {
     vector<int> factors;
@@ -352,7 +365,8 @@ vector<int> primeFactorization(int n, const vector<int>& spf) {
 }
 ```
 
-**Time Complexity**: 
+**Time Complexity**:
+
 - Preprocessing (computing SPF): O(n log log n)
 - Finding prime factorization: O(log n)
 **Space Complexity**: O(n) for the SPF array
