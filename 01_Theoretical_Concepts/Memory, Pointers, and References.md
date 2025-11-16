@@ -63,10 +63,10 @@ A typical C++ program's memory is segmented into several regions:
 ```
 High Address    +------------------+
                 |       Stack      | ← Grows downward
-                |        ↓        |
+                |        ↓         |
                 |                  |
-                |        ↑        |
-                |       Heap      | ← Grows upward
+                |        ↑         |
+                |       Heap       | ← Grows upward
                 |                  |
                 |        BSS       |
                 |                  |
